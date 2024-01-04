@@ -1,0 +1,207 @@
+body {
+    font-family: 'Rubik Doodle Shadow', system-ui;
+    text-align: center;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#container {
+    background-color: #f4f4f4;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#modal {
+    font-family: system-ui;
+    background-color: #3498db;
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute;
+}
+
+#counter {
+    font-family: 'Rubik Doodle Shadow', system-ui;
+    color: #1c82c7;
+    font-size: 56px;
+    line-height: 0px;
+    display: inline-block;
+}
+
+/* Speech bubble styling for the counter */
+.speech-bubble {
+    position: relative;
+    top: -370px;
+    left: -145px;
+    margin: .5em auto;
+    padding: 1em;
+    width: 8em;
+    height: 4em;
+    border-radius: .25em;
+    transform: rotate(-4deg) rotateY(15deg);
+    background: #629bdd;
+    font: 2em/4 Century Gothic, Verdana, sans-serif;
+    text-align: center;
+}
+
+.speech-bubble:before,
+.speech-bubble:after {
+    position: absolute;
+    z-index: -1;
+    content: '';
+}
+
+.speech-bubble:after {
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: inherit;
+    transform: rotate(2deg) translate(.35em, -.15em) scale(1.02);
+    background: #f4fbfe;
+}
+
+.speech-bubble:before {
+    border: solid 0 transparent;
+    border-right: solid 3.5em #f4fbfe;
+    border-bottom: solid .25em #629bdd;
+    bottom: .25em;
+    left: 1.25em;
+    width: 0;
+    height: 1em;
+    transform: rotate(45deg) skewX(75deg);
+}
+
+
+.cta {
+    background: #2391db;
+    margin: 0px 10px;
+    border-radius: 30px;
+    padding: 5px 10px;
+    color:whitesmoke;
+}
+
+.redeemLink {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #2ecc71;
+    border-radius: 5px;
+    border: none;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#animation_canvas {
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    height: 50vh;
+    margin: 0;
+}
+
+.avatar {
+    position: relative;
+    width: 100px;
+    top: 200px;
+}
+
+.armAnimation {
+    animation: curlAnimation 1s infinite alternate;
+}
+
+.forearm {
+    position: absolute;
+    width: 40px;
+    height: 120px;
+    background-color: #f7c19b;
+    left: 50%;
+    bottom: 5px;
+    border-radius: 20% 60% 70% 70%;
+    transform-origin: 50% 0;
+    transform: rotate(30deg);
+}
+
+.head {
+    position: absolute;
+    width: 90px;
+    height: 90px;
+    background-color: #f7c19b;
+    border-radius: 50%;
+    left: 45%;
+    bottom: 233px;
+}
+
+.torso {
+    position: absolute;
+    width: 90px;
+    height: 170px;
+    background-color: #1c82c7;
+    border-radius: 45% 23% 20px 0;
+    left: 37%;
+    bottom: 71px;
+}
+
+.biceps {
+    position: absolute;
+    width: 60px;
+    height: 120px;
+    background-color: #3498db;
+    border-radius: 40% 40% 50% 50%;
+    left: 50%;
+    bottom: 120px;
+    transform-origin: 50% 50%;
+    transform: rotate(15deg);
+}
+
+.dumbbell {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background-color: black;
+    left: -50%;
+    bottom: -45px;
+    border-radius: 50%;
+}
+
+@keyframes curlAnimation {
+    0% {
+        transform: rotate(30deg);
+    }
+    100% {
+        transform: rotate(130deg);
+    }
+}
+
+@keyframes bicepsAnimation {
+    0% {
+        border-radius: 40% 40% 50% 50%;
+    }
+    100% {
+        border-radius: 40% 40% 80% 50%;
+    }
+}
+
